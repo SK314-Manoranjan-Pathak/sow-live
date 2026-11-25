@@ -1,0 +1,41 @@
+{
+  "engagements_root": "~/SoW",
+  "author": "",
+
+  "tick_seconds": 45,
+  "min_new_words_for_tick": 25,
+  "closing_minutes": 10,
+  "default_call_minutes": 60,
+  "max_open_questions_shown": 5,
+  "known_answer_max_age_days": 30,
+
+  "models": {
+    "live": "claude-sonnet-5.5",
+    "advisor": "claude-sonnet-5.5",
+    "org": "claude-sonnet-5.5",
+    "final": "claude-opus-5.5"
+  },
+  "kiro_timeout_seconds": 180,
+
+  "asr": {
+    "model_file": "ggml-large-v3-turbo-q5_0.bin",
+    "model_url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo-q5_0.bin",
+    "model_sha256": "",
+    "language": "en",
+    "threads": 4,
+    "port": 8178,
+    "vocabulary": "ShellKode, AWS, Amazon Bedrock, SageMaker, Lambda, OpenSearch, DynamoDB, S3, ap-south-1, Mumbai, RAG, LLM, SoW, KPI, UAT, SLA, RTO, RPO, SSO, Azure AD, Cognito, ServiceNow, lakh, crore"
+  },
+
+  "audio": {
+    "mic_device": "default",
+    "system_audio": true,
+    "silence_ms_to_cut": 700,
+    "max_segment_seconds": 20,
+    "min_speech_seconds": 0.4
+  },
+
+  "pipeline": {
+    "trust_all_tools": false
+  }
+}

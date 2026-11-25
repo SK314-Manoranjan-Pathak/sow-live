@@ -1,0 +1,67 @@
+{
+  "_comment": "Style spec extracted from the ShellKode reference SoW .docx. Values drive scripts/generate_sow_docx.py; asset paths are relative to the framework home. Sizes in points, colors as hex without '#'.",
+  "page": {
+    "size": "A4",
+    "width_mm": 210,
+    "height_mm": 297,
+    "margin_top_mm": 25,
+    "margin_bottom_mm": 25,
+    "margin_left_mm": 25,
+    "margin_right_mm": 25
+  },
+  "fonts": {
+    "default_body": "DM Sans",
+    "default_fallback": "Arial",
+    "toc_title": "Albert Sans",
+    "cover_prepared_by": "Plus Jakarta Sans",
+    "table_header_alt": "Space Grotesk"
+  },
+  "colors": {
+    "primary_blue": "7F00FF",
+    "heading_blue": "1A4BD2",
+    "subheading_blue": "1155CC",
+    "cover_client_blue": "0D66C6",
+    "table_header_fill": "1155CC",
+    "table_header_text": "FFFFFF",
+    "cover_url_cyan": "00B0F0",
+    "cover_light_text": "FFFFFF",
+    "body_black": "000000",
+    "muted_grey": "666666"
+  },
+  "text_styles": {
+    "cover_client_name": { "font": "DM Sans", "size": 19, "bold": true, "color": "0D66C6" },
+    "cover_project_title": { "font": "DM Sans", "size": 17, "bold": false, "color": "000000" },
+    "cover_prepared_label": { "font": "Plus Jakarta Sans", "size": 13, "bold": false, "color": "FFFFFF" },
+    "cover_author": { "font": "DM Sans", "size": 11, "bold": false, "color": "FFFFFF" },
+    "cover_url": { "font": "DM Sans", "size": 11, "bold": false, "color": "00B0F0" },
+    "toc_title": { "font": "Albert Sans", "size": 20, "bold": true, "color": "7F00FF" },
+    "heading1": { "font": "DM Sans", "size": 18, "bold": true, "color": "7F00FF" },
+    "heading2": { "font": "DM Sans", "size": 14, "bold": true, "color": "1A4BD2" },
+    "heading3": { "font": "DM Sans", "size": 14, "bold": true, "color": "1155CC" },
+    "body": { "font": "DM Sans", "size": 11, "bold": false, "color": "000000", "align": "justify" },
+    "table_header": { "font": "DM Sans", "size": 11, "bold": true, "color": "FFFFFF" },
+    "table_body": { "font": "DM Sans", "size": 10, "bold": false, "color": "000000" }
+  },
+  "table": {
+    "header_fill": "1155CC",
+    "header_text_color": "FFFFFF",
+    "border_color": "BFBFBF",
+    "border_size_pt": 0.5
+  },
+  "footer": {
+    "text": "ShellKode Confidential - for limited purposes only",
+    "show_page_number": true,
+    "confidential_tag": "Internal Only"
+  },
+  "assets": {
+    "logo": "templates/assets/shellkode-logo.png",
+    "cover_art": "templates/assets/cover-art.png"
+  },
+  "company": {
+    "legal_name": "SHELLCODE Private Limited",
+    "display_name": "ShellKode",
+    "registered_office": "10/17, 3rd street Neelikonampalayam, Coimbatore, TamilNadu - 641033, India",
+    "signatory_name": "ShellKode India Pvt Ltd.",
+    "website": "www.shellkode.com"
+  }
+}

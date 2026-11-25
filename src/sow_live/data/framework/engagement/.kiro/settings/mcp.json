@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "aws-pricing-calculator-mcp-server": {
+      "command": "npx",
+      "args": ["-y", "sample-aws-pricing-calculator-mcp@latest"],
+      "autoApprove": [
+        "search_services",
+        "get_service_fields",
+        "add_service",
+        "export_estimate",
+        "create_estimate",
+        "import_estimate",
+        "build_estimate",
+        "validate_estimate",
+        "get_server_info"
+      ]
+    },
+    "awsknowledge": {
+      "type": "http",
+      "url": "https://knowledge-mcp.global.api.aws"
+    },
+    "awslabs.aws-documentation-mcp-server": {
+      "command": "uvx",
+      "args": ["awslabs.aws-documentation-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "autoApprove": [],
+      "disabled": false
+    },
+    "awslabs.aws-pricing-mcp-server": {
+      "command": "uvx",
+      "args": ["awslabs.aws-pricing-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "autoApprove": [],
+      "disabled": false
+    },
+    "sow-knowledge": {
+      "command": "@SOW_LIVE_BIN@",
+      "args": ["mcp"],
+      "autoApprove": ["search_knowledge", "get_engagement", "list_engagements", "find_verified_answers"],
+      "disabled": false
+    }
+  }
+}

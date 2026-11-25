@@ -1,0 +1,22 @@
+# Engagement data never lives in this repo: it is in ~/SoW/<engagement>/ and
+# ~/.sow-live/ on each SA's machine. These rules are a safety net in case
+# someone runs the framework from a checkout.
+/sol/
+/build/
+/live/
+/*.docx
+/*.pdf
+
+# Python / packaging
+__pycache__/
+*.pyc
+.venv/
+venv/
+/dist/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

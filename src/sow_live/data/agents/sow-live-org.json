@@ -1,0 +1,26 @@
+{
+  "name": "sow-live-org",
+  "description": "Live discovery-call org agent. Answers customer questions about ShellKode's own experience (past projects, similar use cases, lessons learned, partnerships) from the ShellKode org wiki, read-only, using the wiki-assistant skill. Invoked headless by sow-live; replies with JSON only.",
+  "prompt": "file://@SOW_FRAMEWORK@/prompts/sow-live-org.md",
+  "mcpServers": {
+    "shellkode-wiki": {
+      "url": "https://wiki.shellkode.ai/mcp",
+      "oauthScopes": [
+        "read"
+      ]
+    }
+  },
+  "tools": [
+    "@shellkode-wiki/list_documents",
+    "@shellkode-wiki/list_collections",
+    "@shellkode-wiki/list_collection_documents",
+    "@shellkode-wiki/fetch",
+    "@shellkode-wiki/list_templates"
+  ],
+  "resources": [
+    "file://@KIRO_SKILLS@/wiki-assistant/SKILL.md",
+    "file://@KIRO_SKILLS@/wiki-assistant/references/vocabulary.md"
+  ],
+  "includeMcpJson": false,
+  "model": "claude-sonnet-5.5"
+}

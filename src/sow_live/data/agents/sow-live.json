@@ -1,0 +1,8 @@
+{
+  "name": "sow-live",
+  "description": "Live discovery-call SoW assist. Maps meeting transcript onto the SoW brief, finds scope gaps, and suggests the next questions for the SA. Invoked headless by sow-live; replies with JSON only.",
+  "prompt": "file://@SOW_FRAMEWORK@/prompts/sow-live-agent.md",
+  "tools": [],
+  "includeMcpJson": false,
+  "model": "claude-sonnet-5.5"
+}

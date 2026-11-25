@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Generate SoW",
+  "description": "Generate the SoW for this engagement with the sow-generator skill (v2 orchestration). Starts from the live-captured brief if a discovery call was captured with sow-live.",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Generate the Statement of Work for this engagement using the sow-generator skill. This workspace is a sow-live engagement folder (see engagement.json). If build/brief.md is marked <!-- source: sow-live -->, follow the skill's live-captured brief path: skip the clarifying round and start at Pass 2. Otherwise run the full two-pass workflow and ask me in one grouped round. Use build/learnings.md (the ShellKode wiki digest) for team learnings. Finish with the .docx path, the assumptions made because of gaps, and any cross-section inconsistencies."
+  }
+}

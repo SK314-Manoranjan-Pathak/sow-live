@@ -1,0 +1,28 @@
+[00:05] SA: Thanks for joining everyone. Before we get into it, could you walk us through what you're trying to solve?
+[00:15] Remote: Sure. So we're FinServe Capital, we're an NBFC, and our customer support team handles loan and EMI queries. Right now everything comes in over email and a call centre, and it's very manual.
+[00:32] Remote: We get roughly two lakh queries a month across email and calls. Average handling time is about eight minutes and we want to bring that down a lot.
+[00:48] SA: Got it. What does good look like for you in six months?
+[00:55] Remote: Honestly, if a bot can resolve around forty percent of queries without an agent, and agents get a suggested answer for the rest, that would be a big win. We'd also like CSAT to stay above four.
+[01:15] Remote: The answers need to come from our policy documents, the loan terms, and the customer's own loan account, like their EMI schedule and outstanding amount.
+[01:32] SA: Where do those documents live today, and how many are there?
+[01:40] Remote: Policies are on SharePoint, maybe twelve hundred PDFs and Word files. Loan data is in our core lending system, it's Finnone, running on-prem in our Mumbai data centre.
+[02:02] SA: And is there an API on Finnone we can call?
+[02:08] Remote: There are some REST APIs, our IT team owns them. I'm not sure if they're exposed outside the data centre. We do have a site-to-site VPN to AWS already.
+[02:25] Remote: One thing, we're RBI regulated, so customer data cannot leave India. Can we even use something like Claude in Mumbai, or does it go to the US?
+[02:40] SA: Good question, let me come back to that in a second.
+[02:45] Remote: Also our security team will ask about PII. Account numbers, PAN, phone numbers will be in the chats.
+[03:02] SA: Which channels would customers use the bot on?
+[03:08] Remote: Web chat on our portal first, and WhatsApp in a later phase. English and Hindi. Agents would use it inside our existing Freshdesk.
+[03:25] SA: So Freshdesk is the ticketing system?
+[03:28] Remote: Yes, Freshdesk cloud. The bot should create a ticket when it hands off to an agent, but it shouldn't do things like change EMI dates itself. That stays with the ops team.
+[03:45] SA: Makes sense. For login, how do customers authenticate on the portal today?
+[03:52] Remote: OTP on mobile number, it's our own service. Agents log in to Freshdesk with Azure AD.
+[04:10] SA: And timelines?
+[04:14] Remote: We have a board review in March, so we'd like a pilot with about fifty agents live by end of February. Full rollout after that.
+[04:30] SA: Do you already have AWS accounts set up?
+[04:34] Remote: Yes, we have a landing zone with Control Tower, our infra team manages it. Everything is in ap-south-1.
+[04:50] Remote: On cost, we'd want to understand the monthly run cost roughly, and we may have some EDP discount with AWS, I'll check with procurement.
+[05:08] SA: Who would sign off on the pilot?
+[05:12] Remote: That would be me, I'm the Head of Customer Experience, along with our CISO for the security review.
+[05:25] Remote: Before we go further, have you done something like this for another bank or lender? I'd like to know what went wrong for them so we don't repeat it.
+[05:40] SA: Yes, let me pull that up for you.

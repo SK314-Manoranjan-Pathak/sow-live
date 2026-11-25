@@ -1,0 +1,44 @@
+{
+  "include_toc": true,
+  "cover": {
+    "client_name": "Acme Manufacturing Private Limited",
+    "project_title": "Serverless Data Lake Platform",
+    "author": "Manoranjan",
+    "website": "www.shellkode.com"
+  },
+  "body": [
+    { "block": "h1", "number": "1", "text": "Service Agreement" },
+    { "block": "p", "text": "This document describes the proposal for engagement to be executed by and between SHELLCODE Private Limited and Acme Manufacturing Private Limited, effective from {{effective_date}} and ending {{expiration_date}}." },
+
+    { "block": "h1", "number": "2", "text": "About ShellKode" },
+    { "block": "p", "text": "ShellKode is a cloud-native company with a global presence, delivering services from multiple strategic locations worldwide." },
+
+    { "block": "h1", "number": "3", "text": "Business Background" },
+    { "block": "p", "text": "Acme Manufacturing is a leading industrial producer seeking to modernize its data platform on AWS." },
+
+    { "block": "h1", "number": "4", "text": "Scope of Work" },
+    { "block": "h2", "number": "4.1", "text": "Phase 1 - Foundation" },
+    { "block": "p", "text": "The objective of this phase is to set up the foundational AWS data lake infrastructure." },
+    { "block": "h3", "number": "4.1.1", "text": "Environment Setup" },
+    { "block": "bullets", "items": [
+      { "text": "Provision S3-based data lake with tiered storage", "children": ["Raw, curated, and consumption zones", "Lifecycle policies to Glacier"] },
+      "Configure AWS Glue Data Catalog and crawlers",
+      "Set up Amazon Athena for ad-hoc querying"
+    ]},
+
+    { "block": "h1", "number": "5", "text": "Roles and Responsibilities" },
+    { "block": "table", "align_center_cols": [1, 2], "header": ["Implementation steps", "ShellKode", "Acme"], "rows": [
+      { "group": "Phase 1: Foundation" },
+      ["Provision S3 data lake and Glue catalog", "R", "I"],
+      ["Share source system access and credentials", "C", "R"],
+      ["Testing and UAT", "C", "R"],
+      ["Final sign-off", "I", "A"]
+    ]},
+
+    { "block": "h1", "number": "6", "text": "Effort Estimate" },
+    { "block": "table", "align_center_cols": [1, 2], "header": ["Resource", "Duration (Weeks)", "Total Cost INR"], "rows": [
+      ["Solutions Architect", "4", "{{cost}}"],
+      ["Senior Data Engineer", "8", "{{cost}}"]
+    ]}
+  ]
+}

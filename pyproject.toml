@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sow-live"
+dynamic = ["version"]
+description = "Discovery-call assist and branded SoW generator for ShellKode Solutions Architects, built on Kiro CLI."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Manoranjan Pathak" }]
+classifiers = [
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+]
+dependencies = [
+  "numpy>=2.0",
+  "rich>=13.7",
+  "python-docx>=1.1.0",
+  "Pillow>=10.0.0",
+]
+
+[project.scripts]
+sow-live = "sow_live.cli:main"
+
+[tool.hatch.version]
+path = "src/sow_live/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sow_live"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/sow_live", "README.md", "LICENSE", "NOTICE.md", "examples"]

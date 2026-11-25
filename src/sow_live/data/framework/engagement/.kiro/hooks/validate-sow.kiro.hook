@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Validate SoW",
+  "description": "When a SoW .docx is created, verify all canonical sections are present, tables are well-formed, the diagram is embedded, and no placeholder tokens remain.",
+  "version": "1",
+  "when": {
+    "type": "fileCreated",
+    "patterns": ["*.docx"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A new .docx was created. If it is a Statement of Work, validate it against @SOW_FRAMEWORK@/standards/sow-sections.md: confirm all 18 canonical sections are present in order, the cover page renders, tables are well-formed, the architecture diagram is embedded, Pre-requisites (before kickoff) and Customer Responsibilities (during delivery) do not duplicate, no other ShellKode customer is named, and no unresolved {{placeholder}} tokens remain that the user should have filled. Also check cross-section consistency (services in Scope == diagram == priced items). Report any gaps concisely. If it is not a SoW, do nothing."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "sow-live-advisor",
+  "description": "Live discovery-call advisor. Answers a customer's technical question (or checks a proposed approach) against AWS documentation, regional availability and pricing, and returns a short answer the SA can say on the call. Invoked headless by sow-live; replies with JSON only.",
+  "prompt": "file://@SOW_FRAMEWORK@/prompts/sow-live-advisor.md",
+  "mcpServers": {
+    "awsknowledge": {
+      "type": "http",
+      "url": "https://knowledge-mcp.global.api.aws"
+    },
+    "awspricing": {
+      "command": "uvx",
+      "args": [
+        "awslabs.aws-pricing-mcp-server@latest"
+      ],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR",
+        "AWS_REGION": "us-east-1"
+      },
+      "timeout": 120000
+    }
+  },
+  "tools": [
+    "@awsknowledge",
+    "@awspricing"
+  ],
+  "includeMcpJson": false,
+  "model": "claude-sonnet-5.5"
+}

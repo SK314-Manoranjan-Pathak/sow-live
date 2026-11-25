@@ -1,0 +1,121 @@
+{
+  "_comment": "Fields the live agent tracks. 'section' and 'label' map each field onto build/brief.md (see framework agents/brief-template.md). tier: critical > important > nice. ask: call = gather from the customer on the call; admin = the SA fills it after the call (never asked live).",
+  "sections": [
+    {
+      "title": "Client & commercial",
+      "fields": [
+        {"id": "client_legal_name", "label": "Client legal name", "tier": "important", "ask": "admin"},
+        {"id": "client_short_name", "label": "Client short name", "tier": "important", "ask": "admin"},
+        {"id": "client_address", "label": "Registered office", "tier": "nice", "ask": "admin"},
+        {"id": "effective_date", "label": "Effective date", "tier": "nice", "ask": "admin"},
+        {"id": "expiration_date", "label": "Expiration date", "tier": "nice", "ask": "admin"},
+        {"id": "author", "label": "Author / preparer", "tier": "nice", "ask": "admin"},
+        {"id": "rate_card", "label": "Rate card (Commercials table)", "tier": "nice", "ask": "admin"},
+        {"id": "stakeholders", "label": "Customer stakeholders, decision maker and sign-off owner", "tier": "important", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Solution overview",
+      "fields": [
+        {"id": "objective", "label": "One-line objective", "tier": "critical", "ask": "call"},
+        {"id": "current_state", "label": "Problem today (current process, pain, cost)", "tier": "critical", "ask": "call"},
+        {"id": "solution_summary", "label": "What we deliver", "tier": "critical", "ask": "call"},
+        {"id": "users_and_volume", "label": "Target users / volume", "tier": "critical", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Outcomes & KPIs",
+      "fields": [
+        {"id": "kpis", "label": "Business KPIs and target numbers (baseline -> target)", "tier": "critical", "ask": "call"},
+        {"id": "success_criteria", "label": "Acceptance / success criteria verifiable in UAT", "tier": "critical", "ask": "call"},
+        {"id": "quality_bar", "label": "Quality bar (accuracy, latency, response time expectations)", "tier": "important", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Data & content",
+      "fields": [
+        {"id": "data_sources", "label": "Data sources, formats and where they live", "tier": "critical", "ask": "call"},
+        {"id": "data_volume", "label": "Data volume (documents, records, GB) and growth", "tier": "important", "ask": "call"},
+        {"id": "data_classification", "label": "Data sensitivity / PII / classification", "tier": "important", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Region & data residency",
+      "fields": [
+        {"id": "region", "label": "Target region(s)", "tier": "critical", "ask": "call"},
+        {"id": "residency_rules", "label": "Data residency / localization", "tier": "critical", "ask": "call"},
+        {"id": "cross_region_allowed", "label": "Cross-region inference/data allowed?", "tier": "important", "ask": "call"},
+        {"id": "compliance", "label": "Compliance frameworks (RBI, ISO, SOC2, GDPR, internal policy)", "tier": "important", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Identity & auth",
+      "fields": [
+        {"id": "auth", "label": "Mechanism", "tier": "important", "ask": "call"},
+        {"id": "idp_details", "label": "IdP details available (tenant/client/redirect)?", "tier": "nice", "ask": "call"},
+        {"id": "roles_permissions", "label": "Roles / permission model in scope", "tier": "nice", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Integrations & APIs",
+      "fields": [
+        {"id": "systems", "label": "Systems to integrate", "tier": "critical", "ask": "call"},
+        {"id": "hosting_connectivity", "label": "Hosting (cloud/on-prem) + connectivity", "tier": "important", "ask": "call"},
+        {"id": "api_readiness", "label": "API docs/creds/test env available? Who owns the APIs?", "tier": "important", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Scale / availability / AI params",
+      "fields": [
+        {"id": "scale", "label": "Users, RPS/volume (peak and average)", "tier": "critical", "ask": "call"},
+        {"id": "availability", "label": "Availability tier, RTO/RPO", "tier": "important", "ask": "call"},
+        {"id": "ai_params", "label": "AI: avg input/output tokens, images/request", "tier": "important", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Cost & pricing basis",
+      "fields": [
+        {"id": "pricing_basis", "label": "Pricing basis (public on-demand vs EA)", "tier": "important", "ask": "call"},
+        {"id": "budget", "label": "Budget / tier", "tier": "nice", "ask": "call"},
+        {"id": "commitments", "label": "Include RI/SP/CUD?", "tier": "nice", "ask": "call"},
+        {"id": "funding", "label": "AWS funding / credits programme in play?", "tier": "nice", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Models / AI specifics",
+      "fields": [
+        {"id": "models", "label": "Model(s) and region availability", "tier": "important", "ask": "call"},
+        {"id": "hosting_choice", "label": "Managed (Bedrock serverless) vs self-hosted", "tier": "important", "ask": "call"},
+        {"id": "fine_tuning", "label": "Fine-tuning in scope?", "tier": "nice", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Scope & phasing",
+      "fields": [
+        {"id": "capabilities", "label": "Core capabilities in scope", "tier": "critical", "ask": "call"},
+        {"id": "phases", "label": "Phases (MVP / pilot / production)", "tier": "critical", "ask": "call"},
+        {"id": "priorities", "label": "Must-have vs optional", "tier": "critical", "ask": "call"},
+        {"id": "non_goals", "label": "Explicit non-goals / out of scope", "tier": "important", "ask": "call"},
+        {"id": "boundaries", "label": "Delivery boundaries (executes vs produces requests, channels, languages)", "tier": "important", "ask": "call"},
+        {"id": "deliverables", "label": "Concrete deliverables the customer expects", "tier": "critical", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Timeline & delivery",
+      "fields": [
+        {"id": "timeline", "label": "Target start, go-live date and drivers", "tier": "critical", "ask": "call"},
+        {"id": "uat_signoff", "label": "UAT process, pilot group, sign-off SLA", "tier": "important", "ask": "call"},
+        {"id": "testing_scope", "label": "Testing in scope (functional, load, security, pen-test)", "tier": "important", "ask": "call"},
+        {"id": "customer_team", "label": "Customer team availability (SMEs, IT, security reviewers)", "tier": "important", "ask": "call"},
+        {"id": "post_golive", "label": "Hypercare / support / handover expectations", "tier": "nice", "ask": "call"}
+      ]
+    },
+    {
+      "title": "Architecture components (for diagram-agent)",
+      "fields": [
+        {"id": "components", "label": "Key components / services", "tier": "important", "ask": "call"},
+        {"id": "existing_aws", "label": "Existing AWS footprint (accounts, landing zone, VPCs)", "tier": "important", "ask": "call"}
+      ]
+    }
+  ]
+}

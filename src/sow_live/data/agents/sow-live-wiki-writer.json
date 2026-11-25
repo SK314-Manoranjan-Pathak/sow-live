@@ -1,0 +1,24 @@
+{
+  "name": "sow-live-wiki-writer",
+  "description": "Drafts learnings into the ShellKode org wiki as unpublished drafts for human review, following the wiki-assistant skill. Used only by `sow-live wiki-seed`; never publishes.",
+  "prompt": "file://@SOW_FRAMEWORK@/prompts/sow-live-wiki-writer.md",
+  "mcpServers": {
+    "shellkode-wiki": {
+      "url": "https://wiki.shellkode.ai/mcp",
+      "oauthScopes": ["read", "write"]
+    }
+  },
+  "tools": [
+    "@shellkode-wiki/list_documents",
+    "@shellkode-wiki/list_collections",
+    "@shellkode-wiki/list_collection_documents",
+    "@shellkode-wiki/fetch",
+    "@shellkode-wiki/create_document"
+  ],
+  "resources": [
+    "file://@KIRO_SKILLS@/wiki-assistant/SKILL.md",
+    "file://@KIRO_SKILLS@/wiki-assistant/references/vocabulary.md"
+  ],
+  "includeMcpJson": false,
+  "model": "claude-sonnet-5.5"
+}
